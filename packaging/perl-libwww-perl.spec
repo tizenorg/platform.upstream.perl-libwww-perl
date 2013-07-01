@@ -6,6 +6,7 @@ Summary:        A Perl interface to the World-Wide Web
 Url:            http://search.cpan.org/dist/libwww-perl/
 Group:          Development/Libraries
 Source0:        libwww-perl-%{version}.tar.gz
+Source1001: 	perl-libwww-perl.manifest
 BuildRequires:  perl(Compress::Zlib)
 BuildRequires:  perl(URI)
 Requires:       perl(Compress::Zlib)
@@ -22,6 +23,7 @@ help you implement simple HTTP servers.
 
 %prep
 %setup -q -n libwww-perl-%{version}
+cp %{SOURCE1001} .
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
